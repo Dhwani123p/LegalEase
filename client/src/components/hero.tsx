@@ -12,7 +12,6 @@ export default function Hero({ onStartChat }: HeroProps) {
       <div className="absolute inset-0 opacity-20">
         <div className="h-full w-full bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
       </div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         
         {/* Left Content */}
@@ -63,7 +62,7 @@ export default function Hero({ onStartChat }: HeroProps) {
                   <Bot className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold">AI Chatbot</h3>
+                  <h3 className="text-white font-semibold">LegalEase</h3>
                   <p className="text-white/70 text-sm">For local law inquiries and legal documents</p>
                 </div>
               </div>
