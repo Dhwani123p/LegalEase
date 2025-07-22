@@ -47,7 +47,7 @@ export default function Footer() {
               <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
                 <Bot className="text-white" />
               </div>
-              <span className="text-xl font-bold">LegalEase</span>
+              
             </div>
             <p className="text-white/80 mb-6">
               Your trusted AI-powered legal assistant for Indian law queries and document assistance.
