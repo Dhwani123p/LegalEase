@@ -410,7 +410,7 @@ To file an FIR in India, follow these steps:
   }
 
   async getWelcomeMessage(): Promise<string> {
-    return `🙏 **Welcome to AI Legal ChatBot!**
+    return `🙏 **Welcome to LegalEase!**
 
 I'm your intelligent legal assistant specializing in **Indian law**. I can help you with:
 

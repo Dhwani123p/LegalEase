@@ -117,7 +117,7 @@ export default function Chat() {
                 <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
                   <Bot className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-xl font-bold text-gray-900">AI Legal ChatBot</span>
+                <span className="text-xl font-bold text-gray-900">LegalEase</span>
               </div>
             </div>
             
@@ -138,7 +138,7 @@ export default function Chat() {
                 <Bot className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-semibold">AI Legal ChatBot</h3>
+                <h3 className="font-semibold">LegalEase</h3>
                 <p className="text-sm opacity-90">Your AI-Powered Local Law Assistant</p>
               </div>
             </div>
