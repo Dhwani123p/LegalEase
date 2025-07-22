@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/60 text-sm">© 2024 AI Legal ChatBot. All rights reserved.</p>
+          <p className="text-white/60 text-sm">© 2024 LegalEase. All rights reserved.</p>
           <p className="text-white/60 text-sm mt-4 md:mt-0">Made with ❤️ for Indian Legal System</p>
         </div>
       </div>

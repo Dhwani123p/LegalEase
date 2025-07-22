@@ -1,11 +1,47 @@
 import { Button } from "@/components/ui/button";
-import { Bot, Play, User } from "lucide-react";
+import { Bot, Play, User, CheckCircle, FileText, MessageSquare, Shield, X } from "lucide-react";
+import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface HeroProps {
   onStartChat: () => void;
 }
 
 export default function Hero({ onStartChat }: HeroProps) {
+  const [showDemo, setShowDemo] = useState(false);
+
+  const demoFeatures = [
+    {
+      icon: MessageSquare,
+      title: "Interactive Chat Interface",
+      description: "Natural conversation flow with intelligent legal responses",
+      highlight: "Ask questions in plain English and get detailed legal guidance"
+    },
+    {
+      icon: FileText,
+      title: "Document Analysis & OCR",
+      description: "Upload images of legal documents for instant text extraction and analysis",
+      highlight: "Supports PNG, JPG, PDF up to 10MB with intelligent categorization"
+    },
+    {
+      icon: Shield,
+      title: "Comprehensive Legal Coverage",
+      description: "15+ Indian legal areas including property, criminal, family, and civil law",
+      highlight: "Step-by-step procedures, required documents, and court processes"
+    },
+    {
+      icon: CheckCircle,
+      title: "Privacy & Security",
+      description: "End-to-end encryption with no data sharing to third parties",
+      highlight: "Your legal conversations remain completely confidential"
+    }
+  ];
   return (
     <section id="home" className="bg-gradient-to-br from-slate-900 via-blue-900 to-blue-800 min-h-screen flex items-center relative overflow-hidden">
       {/* Background Pattern */}
@@ -20,7 +56,7 @@ export default function Hero({ onStartChat }: HeroProps) {
             <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
               <Bot className="text-white text-2xl" />
             </div>
-            <span className="text-xl font-semibold">AI Legal Chat Bot</span>
+            <span className="text-xl font-semibold">LegalEase</span>
           </div>
           
           <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -45,6 +81,7 @@ export default function Hero({ onStartChat }: HeroProps) {
             </Button>
             <Button 
               variant="outline"
+              onClick={() => setShowDemo(true)}
               className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-primary transition-all duration-300 bg-transparent"
             >
               <Play className="mr-2 h-5 w-5" />
@@ -114,6 +151,70 @@ export default function Hero({ onStartChat }: HeroProps) {
           </div>
         </div>
       </div>
+
+      {/* Demo Modal */}
+      <Dialog open={showDemo} onOpenChange={setShowDemo}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-3 text-2xl">
+              <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
+                <Play className="w-5 h-5 text-white" />
+              </div>
+              LegalEase Platform Demo
+            </DialogTitle>
+            <DialogDescription>
+              Discover how our AI-powered legal assistant can help you with Indian law queries and document analysis
+            </DialogDescription>
+          </DialogHeader>
+          
+          <div className="space-y-6 py-4">
+            {demoFeatures.map((feature, index) => (
+              <div key={index} className="border rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                    <p className="text-gray-600 mb-3">{feature.description}</p>
+                    <div className="bg-blue-50 border-l-4 border-blue-500 p-3 rounded">
+                      <p className="text-blue-800 font-medium text-sm">✨ {feature.highlight}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="border-t pt-6">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Ready to Get Started?</h3>
+              <p className="text-gray-700 mb-4">
+                Experience the power of AI-driven legal assistance. Start a conversation with our intelligent legal chatbot 
+                and get instant answers to your Indian law questions.
+              </p>
+              <div className="flex gap-4">
+                <Button 
+                  onClick={() => {
+                    setShowDemo(false);
+                    onStartChat();
+                  }}
+                  className="gradient-primary text-white"
+                >
+                  <MessageSquare className="w-4 h-4 mr-2" />
+                  Start Chat Now
+                </Button>
+                <Button 
+                  variant="outline"
+                  onClick={() => setShowDemo(false)}
+                >
+                  Close Demo
+                </Button>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
