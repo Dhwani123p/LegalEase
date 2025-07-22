@@ -26,7 +26,7 @@ export default function ChatInterface({ onStartChat }: ChatInterfaceProps) {
                   <Bot className="text-white text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold text-lg">AI Legal ChatBot</h3>
+                  <h3 className="text-white font-semibold text-lg">LegalEase</h3>
                   <p className="text-white/80 text-sm">Your AI-Powered Local Law Assistant</p>
                 </div>
               </div>
