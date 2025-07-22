@@ -31,7 +31,8 @@ export default function Navigation() {
               <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
                 <Bot className="text-white text-lg" />
               </div>
-              <span className="text-xl font-bold text-gray-900">AI Legal ChatBot</span>
+              <span className="text-xl font-bold text-gray-900">LegalEase
+</span>
             </div>
           </Link>
           
