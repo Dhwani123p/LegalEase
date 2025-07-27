@@ -4,28 +4,11 @@ This guide covers multiple deployment options for the LegalEase AI Legal ChatBot
 
 ## 🚀 Quick Deployment Options
 
-### 1. Replit Deployments (Recommended)
 
-**Best for: Instant deployment with zero configuration**
 
-1. **Push to GitHub:**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/yourusername/legalease-chatbot.git
-   git push -u origin main
-   ```
 
-2. **Deploy on Replit:**
-   - Go to [Replit](https://replit.com)
-   - Click "Import from GitHub"
-   - Enter your repository URL
-   - Click "Deploy" in the Replit interface
-   - Automatic PostgreSQL database and environment setup
 
-### 2. Vercel Deployment
+### 1. Vercel Deployment
 
 **Best for: Frontend-focused projects with serverless functions**
 
@@ -43,7 +26,7 @@ This guide covers multiple deployment options for the LegalEase AI Legal ChatBot
    - `DATABASE_URL`: Your PostgreSQL connection string
    - `NODE_ENV`: production
 
-### 3. Railway Deployment
+### 2. Railway Deployment
 
 **Best for: Full-stack applications with databases**
 
@@ -60,7 +43,7 @@ This guide covers multiple deployment options for the LegalEase AI Legal ChatBot
    - `DATABASE_URL`: Railway PostgreSQL connection string
    - `NODE_ENV`: production
 
-### 4. Render Deployment
+### 3. Render Deployment
 
 **Best for: Simple deployment with automatic builds**
 
@@ -78,7 +61,7 @@ This guide covers multiple deployment options for the LegalEase AI Legal ChatBot
    - Create new PostgreSQL service on Render
    - Copy connection string to environment variables
 
-### 5. Heroku Deployment
+### 4. Heroku Deployment
 
 1. **Install Heroku CLI and login:**
    ```bash
