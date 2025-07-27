@@ -53,30 +53,7 @@ A comprehensive AI-powered legal assistant specializing in Indian law, featuring
 
 ## Deployment
 
-### Quick Deploy Options
 
-#### 1. **Replit Deployments** (Recommended)
-- Connect your GitHub repository to Replit
-- Click "Deploy" in the Replit interface
-- Automatic builds and hosting with PostgreSQL database
-
-#### 2. **Vercel**
-- Connect GitHub repository to Vercel
-- Set build command: `npm run build`
-- Set start command: `npm start`
-- Add environment variables in Vercel dashboard
-
-#### 3. **Railway**
-- Connect GitHub repository to Railway
-- Automatic detection of Node.js project
-- Add PostgreSQL service
-- Set environment variables
-
-#### 4. **Render**
-- Connect GitHub repository to Render
-- Set build command: `npm run build`
-- Set start command: `npm start`
-- Add PostgreSQL database
 
 ### Environment Variables for Production
 
@@ -133,24 +110,12 @@ PORT=5000
 - Secure document storage
 - Privacy-compliant data handling
 
-## Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## License
-
-MIT License - see LICENSE file for details
 
 ## Support
 
 For issues and questions:
 - Create an issue on GitHub
-- Contact support through the application
-- Visit our help center
 
 ---
 
